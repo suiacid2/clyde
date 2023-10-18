@@ -1,0 +1,97 @@
+@import url(common.css);
+
+/* フォームのコンテナflex設定 */
+main form div.formcontainer {
+  display: flex;
+  text-align: left;
+  column-gap: 30px;
+  /* padding: 10px 95px 40px 95px; */
+  padding: 10px 8.5% 40px 8.5%;
+  border: 2px solid #4a4a4a;
+}
+
+/* フォーム項目 */
+main form div.formcontainer legend {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+/* アスタリスクの位置 */
+main form legend span {
+  padding-left: 6px;
+}
+
+/* 幅比率 */
+main form div.formitem {
+  flex: 1;
+}
+
+/* 幅100％ */
+main input[type="text"],
+main input[type="email"],
+main input[type="tel"],
+main textarea {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+}
+
+/* テキストエリア高さ */
+main textarea {
+  height: 17em;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+/* フォーム注意 */
+main form aside {
+  text-align: right;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+/* 送信ボタン */
+main form p button {
+  background-color: #6b5311;
+  color: #fffdf8;
+  font-size: 18px;
+  padding: 16.5px 62px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 67px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 不透明度:0.7 */
+main form button:hover {
+  opacity: 0.7;
+}
+
+/* 個人情報保護について */
+main aside.privacy {
+  background-color: #6b5311;
+  color: #fffdf8;
+  font-size: 16px;
+  padding: 13px 30px;
+  max-width: 730px;
+  margin: 0 auto;
+  margin-bottom: 67px;
+}
+
+/* 個人情報保護について：内容 */
+main aside.privacy p {
+  padding-top: 6px;
+  text-align: left;
+}
+
+/* レスポンシブ */
+@media (max-width: 767px) {
+  main form div.formcontainer {
+    display: block;
+  }
+}

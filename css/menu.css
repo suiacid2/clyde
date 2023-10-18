@@ -1,0 +1,81 @@
+@import url(common.css);
+
+/* FlexBox、折り返す、横間隔:30px */
+main div {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.63%;
+}
+
+/* セクション周りのボーダー */
+main section {
+  border: 2px solid #4a4a4a;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  margin-bottom: 67px;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* セクションの幅サイズ */
+  flex-basis: 48.6%;
+}
+
+/* メニューの写真 */
+main section p img {
+  padding-bottom: 22px;
+}
+
+/* メニューの名前 */
+main section h2 {
+  color: #54410c;
+  font-size: 24px;
+  font-weight: bold;
+  background-image: url(../img/line.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 48px;
+  margin-bottom: 22px;
+}
+
+/* メニューの説明 */
+main section p.explanation {
+  text-align: left;
+  font-size: 18px;
+  color: #1d1502;
+
+  padding-bottom: 12px;
+}
+
+/* メニューの価格 */
+main section p.plice {
+  color: #54410c;
+  font-size: 24px;
+  padding-bottom: 19px;
+}
+
+/* リンクボタン
+ブロック表示、幅:フィット、外側余白:0 auto、繰り返しなし、背景画像位置:右から24px 中央*/
+main section p.link a {
+  background-color: #6b5311;
+  color: #fffdf8;
+  font-size: 18px;
+  padding-top: 16.5px;
+  padding-bottom: 16.5px;
+  display: block;
+  max-width: 350px;
+  margin: 0 auto;
+  background-image: url(../img/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+}
+
+/* リンクボタンのホバー設定、不透明度:0.7*/
+main section p a:hover {
+  opacity: 0.7;
+}
+
+/* レスポンシブ */
+@media (max-width: 991px) {
+  main div {
+    display: block;
+  }
+}

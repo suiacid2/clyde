@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@700&display=swap");
+
+/* 自動スクロール */
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* デフォルトのテキストの書式 */
+  font-family: "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "MS PGothic", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5;
+  background-color: #fffdf8;
+}
+
+/* リンクのカラー同じ、下線なし */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* THE CLYDEロゴ */
+header h1 {
+  padding-top: 23px;
+  margin-bottom: 29px;
+}
+
+/*［メニューの書式］上下ボーダー */
+nav {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #6a6a6a;
+  border-bottom: 2px solid #6a6a6a;
+  margin-bottom: 36px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  /* メニューバーを上部で固定して一緒にスクロール */
+  position: sticky;
+  top: 0;
+  background-color: hsla(43, 100%, 99%, 0.85);
+  z-index: 1;
+}
+
+/* メニュー */
+nav ul {
+  /* コンテナ */
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* Flexbox 、横方向：均等配置*/
+  display: flex;
+  justify-content: space-between;
+}
+
+/*［メニュー項目の書式］１行で表示、display:inlineを使う場合隣との間:100px */
+nav li {
+  color: #54410c;
+  font-size: 18px;
+}
+
+/*［メニューのリンク文字のホバー設定］下線表示、不透明度:70% */
+nav li a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+/*［HOMEの書式］太字 */
+nav li.active a {
+  color: #000;
+  font-weight: bold;
+}
+
+/*［mainの書式］ */
+main {
+  padding-bottom: 57px;
+  /* コンテナ */
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* 下層ページ（見出し） */
+main article h1 {
+  font-family: "Kaisei Tokumin", serif;
+  color: #1d1502;
+  font-size: 40px;
+  /* font-weight: bold; */
+  background-image: url(../img/since1963.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 57px;
+  margin-bottom: 67px;
+  /* background-color: aqua; */
+}
+
+/* ご予約はこちら：ホバー設定 */
+main aside a:hover {
+  opacity: 0.7;
+}
+
+/* フッターのバックグラウンドカラー */
+footer {
+  background-color: #322707;
+  padding-top: 42px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* フッター営業時間全体の背景、文字色 */
+footer section {
+  background-color: #5f4e1c;
+  margin-bottom: 30px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1d1502;
+}
+
+/* 営業時間 */
+footer section h3 {
+  font-size: 20px;
+  padding-top: 11px;
+  padding-bottom: 6px;
+}
+
+/* 6時～23時 */
+footer section p {
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 11px;
+}
+
+/* フッターの画像 */
+footer .logo1 {
+  padding-bottom: 30px;
+}
+footer .map {
+  padding-bottom: 30px;
+}
+
+/*［ページトップ］固定配置 */
+footer .pagetop {
+  position: fixed;
+  right: 34px;
+  bottom: 34px;
+}
+
+/* ページトップへ：不透明度:0.7 */
+footer .pagetop a:hover {
+  opacity: 0.7;
+}
+
+/* 住所 */
+footer address {
+  font-size: 18px;
+  color: #fffdf8;
+  padding-bottom: 30px;
+}
+
+/* 住所の横のアイコン */
+footer address img {
+  padding-right: 9px;
+}
+
+/* 著作権 */
+footer p.Copyright {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #fffdf8;
+  background-color: #000;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+/* レスポンシブ */
+@media (max-width: 767px) {
+  nav {
+    /* sticky解除 */
+    position: unset;
+  }
+
+  nav ul {
+    /* 改行する */
+    display: block;
+  }
+
+  nav li {
+    padding-bottom: 12px;
+  }
+
+  footer p.Copyright span {
+    /* none：非表示 */
+    display: none;
+  }
+}
